@@ -1,4 +1,4 @@
-import { ChainId } from '@dcl/schemas'
+import { ChainId } from 'tw-schemas'
 import { ConnectorUpdate } from '@web3-react/types'
 import { AbstractConnector } from '../src/connectors/AbstractConnector'
 import { Storage } from '../src/storage'

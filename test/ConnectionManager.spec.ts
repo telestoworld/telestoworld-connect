@@ -1,7 +1,7 @@
 import chai from 'chai'
 import chaiAsPromised from 'chai-as-promised'
 import sinon from 'sinon'
-import { ChainId } from '@dcl/schemas'
+import { ChainId } from 'tw-schemas'
 import { getConfiguration } from '../src/configuration'
 import { ConnectionManager, connection } from '../src/ConnectionManager'
 import {
@@ -78,8 +78,8 @@ describe('ConnectionManager', () => {
       expect(JSON.stringify(result)).to.eq(
         JSON.stringify({
           provider: {
-            request: () => {},
-            send: () => {}
+            request: () => { },
+            send: () => { }
           },
           providerType: ProviderType.INJECTED,
           account: activateResult.account,
@@ -101,7 +101,7 @@ describe('ConnectionManager', () => {
       expect(JSON.stringify(result)).to.eq(
         JSON.stringify({
           provider: {
-            request: () => {}
+            request: () => { }
           },
           providerType: ProviderType.INJECTED,
           account,
@@ -157,7 +157,7 @@ describe('ConnectionManager', () => {
       expect(JSON.stringify(result)).to.eq(
         JSON.stringify({
           provider: {
-            request: () => {}
+            request: () => { }
           },
           providerType: ProviderType.FORTMATIC,
           account,
@@ -245,7 +245,7 @@ describe('ConnectionManager', () => {
 
       async function createProvider(providerType: ProviderType) {
         const stubConnector = new StubConnector()
-        const provider = { send: () => {} }
+        const provider = { send: () => { } }
 
         const getConnectorStub = sinon
           .stub(connectionManager, 'buildConnector')
@@ -349,9 +349,9 @@ describe('ConnectionManager', () => {
         ProviderType.WALLET_CONNECT,
         chainId
       )
-      ;(connector as WalletConnectConnector).walletConnectProvider = getSendableProvider(
-        chainId
-      )
+        ; (connector as WalletConnectConnector).walletConnectProvider = getSendableProvider(
+          chainId
+        )
 
       expect(connector).to.be.instanceOf(WalletConnectConnector)
       return expect(connector.getChainId()).to.eventually.eq(chainId)

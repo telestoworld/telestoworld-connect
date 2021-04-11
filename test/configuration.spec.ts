@@ -1,4 +1,4 @@
-import { ChainId } from '@dcl/schemas'
+import { ChainId } from 'tw-schemas'
 import { expect } from 'chai'
 import { getConfiguration } from '../src/configuration'
 import { ProviderType } from '../src/types'
@@ -6,7 +6,7 @@ import { ProviderType } from '../src/types'
 describe('#getConfiguration', () => {
   it('should return the configuration using the environment', () => {
     expect(getConfiguration()).to.deep.eq({
-      storageKey: 'decentraland-connect-storage-key',
+      storageKey: 'telestoworld-connect-storage-key',
 
       [ProviderType.INJECTED]: {},
       [ProviderType.FORTMATIC]: {

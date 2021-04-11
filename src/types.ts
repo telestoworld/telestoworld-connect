@@ -1,4 +1,4 @@
-import { ChainId } from '@dcl/schemas'
+import { ChainId } from 'tw-schemas'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 import { EventEmitter } from 'events'
 

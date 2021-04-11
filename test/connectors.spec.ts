@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import sinon from 'sinon'
-import { ChainId } from '@dcl/schemas'
+import { ChainId } from 'tw-schemas'
 import {
   InjectedConnector,
   FortmaticConnector,

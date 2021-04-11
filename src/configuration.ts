@@ -1,8 +1,8 @@
-import { ChainId } from '@dcl/schemas'
+import { ChainId } from 'tw-schemas'
 import { ProviderType } from './types'
 
 const configuration = Object.freeze({
-  storageKey: 'decentraland-connect-storage-key',
+  storageKey: 'telestoworld-connect-storage-key',
 
   [ProviderType.INJECTED]: {},
 

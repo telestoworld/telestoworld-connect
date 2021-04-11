@@ -1,4 +1,4 @@
-import { ChainId } from '@dcl/schemas'
+import { ChainId } from 'tw-schemas'
 import { ConnectorUpdate } from '@web3-react/types'
 import {
   AbstractConnector,
@@ -22,7 +22,7 @@ import './declarations'
 export class ConnectionManager {
   connector?: AbstractConnector
 
-  constructor(public storage: Storage) {}
+  constructor(public storage: Storage) { }
 
   async connect(
     providerType: ProviderType,

@@ -1,4 +1,4 @@
-import { ChainId } from '@dcl/schemas'
+import { ChainId } from 'tw-schemas'
 import { WalletConnectConnector as BaseWalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { getConfiguration } from '../configuration'
 import { ProviderType } from '../types'

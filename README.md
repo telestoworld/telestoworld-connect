@@ -1,4 +1,4 @@
-<img src="https://ui.decentraland.org/decentraland_256x256.png" height="128" width="128" />
+<img src="https://ui.telestoworld.org/telestoworld_256x256.png" height="128" width="128" />
 
 # Decentraland Connect
 
@@ -243,7 +243,7 @@ import {
   ConnectionResponse,
   ProviderType,
   ChainId
-} from 'decentraland-connect'
+} from 'telestoworld-connect'
 
 async function connect() {
   let result: ConnectionResponse
@@ -286,5 +286,5 @@ npm run test:report
 
 # Copyright
 
-This repository is protected with a standard Apache 2 license. See the terms and conditions in the [LICENSE](https://github.com/decentraland/decentraland-connect/blob/master/LICENSE) file.
+This repository is protected with a standard Apache 2 license. See the terms and conditions in the [LICENSE](https://github.com/telestoworld/telestoworld-connect/blob/master/LICENSE) file.
 

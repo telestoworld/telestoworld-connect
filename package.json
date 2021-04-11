@@ -1,12 +1,12 @@
 {
-  "name": "decentraland-connect",
-  "version": "0.0.0-development",
+  "name": "telestoworld-connect",
+  "version": "0.0.1",
   "main": "dist",
   "scripts": {
     "prebuild": "rimraf dist",
     "lint": "tslint --project tsconfig.json -e '*.json' -c tslint.json 'src/**/*.ts{,x}'",
     "lint:fix": "tslint  --fix --project tsconfig.json -e '*.json' -c tslint.json 'src/**/*.ts{,x}'",
-    "build": "npm run lint && npm run test && tsc --project tsconfig.json",
+    "build": "./node_modules/.bin/tsc --project tsconfig.json",
     "test": "nyc mocha --require ts-node/register --project ./tsconfig.json --watch-files src, test/**/*.ts",
     "test:watch": "npm test -- --watch",
     "test:report": "npx nyc --silent --no-clean npm run test && npx nyc report --reporter=lcov --reporter=text",
@@ -14,7 +14,7 @@
     "commitmsg": "validate-commit-msg"
   },
   "dependencies": {
-    "@dcl/schemas": ">=1.1.0",
+    "tw-schemas": ">=0.0.2",
     "@types/node": "^10.1.2",
     "@web3-react/fortmatic-connector": "^6.1.6",
     "@web3-react/injected-connector": "^6.0.7",
@@ -29,7 +29,7 @@
     "@types/sinon": "^9.0.9",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "dcl-tslint-config-standard": "^1.0.1",
+    "tw-tslint-config-standard": "3.0.0",
     "husky": "^0.14.3",
     "mocha": "^8.2.1",
     "nyc": "^15.1.0",
@@ -46,7 +46,7 @@
     "validate-commit-message": "^3.0.1"
   },
   "peerDependencies": {
-    "@dcl/schemas": ">=1.1.0"
+    "tw-schemas": ">=1.1.0"
   },
   "prettier": {
     "printWidth": 80,
@@ -69,6 +69,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/decentraland/decentraland-connect.git"
+    "url": "https://github.com/telestoworld/telestoworld-connect.git"
   }
 }
